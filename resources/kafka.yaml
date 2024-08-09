@@ -29,6 +29,6 @@ spec:
       type: persistent-claim
     version: 3.7.0
   zookeeper:
-    replicas: 3
+    replicas: 2
     storage:
       type: ephemeral
