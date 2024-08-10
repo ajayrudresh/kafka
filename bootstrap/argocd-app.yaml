@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kafka
+spec:
+  destination:
+    namespace: amq
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: resources
+    repoURL: 'https://github.com/ajayrudresh/kafka.git'
+    targetRevision: HEAD
+  syncPolicy:
+    automated: {}
